@@ -1,0 +1,38 @@
+<div class="testbox">
+    <form>
+      <div class="banner">
+        <h1>Donation Form</h1>
+      </div>
+      <br/>
+      <fieldset>
+        <legend>Donation Form</legend>
+        <div class="colums">
+          <div class="item">
+            <label for="fname">UserId<span>*</span></label>
+            <input id="fname" ng-model="payment.customerId" type="text" name="fname" />
+          </div>
+          <div class="item">
+            <label for="lname">Name<span>*</span></label>
+            <input id="lname" ng-model="payment.customerName" type="text" name="lname" />
+          </div>
+          <div class="item">
+            <label for="address">Email Address<span>*</span></label>
+            <input id="address" type="text" ng-model="payment.customerMail"   name="address" />
+          </div>
+          <div class="item">
+            <label >Amount<span>*</span></label>
+            <input id="number" type="number" ng-model="payment.customerAmount"   name="Amount"/>
+          </div>
+          
+          
+          
+          
+      </fieldset>
+      <br/>
+      <div class="btn-block">
+        <button type="order"ng-click="payment.checkout()" >CheckOut</button>
+        </div>
+ 
+      
+    </form>
+    </div>
