@@ -40,7 +40,10 @@ route.post('/payment',(req,res)=>{
             generateNewToken(req.body.customerId,req.body.merchantRefNum,'existing',res)   
         }
         }
-        // res.send({data:"success"})
+        else{
+            res.send({data:"success"})   
+        }
+        
       });
       
 
@@ -61,6 +64,7 @@ route.get('/customers/:merchantRefNo',(req,res)=>{
             var date = new Date();
             var ctime=date.getTime()
             if((expirytokentime-ctime)>0){
+
                 res.send({data:data[0].singleUseToken,customerId:data[0].customerId})
             }
             else{
